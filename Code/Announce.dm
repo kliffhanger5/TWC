@@ -49,8 +49,8 @@ mob/test/verb/Download_Savefile()
 
 image/meditate/icon = 'Meditate.dmi'
 
-var/meditateWait = 50
-var/meditateDelay = 50
+
+
 mob
 	verb
 		Meditate()
@@ -59,25 +59,12 @@ mob
 				new /StatusEffect/UsedMeditate(src,10)
 				overlays+=/image/meditate
 				hearers()<<"<span style=\"color:red;\">[src] meditates.</span>"
-				var/maxMP = MMP + extraMMP
-				for()
-					if(meditateWait >= 0)
-						if(MP < maxMP)
-							MP = min(maxMP, MP + maxMP*0.05)
-							updateHPMP()
-							meditateWait -= 10
-						if(meditateWait == 0)
-							break
-						if(MP >= maxMP)
-							break;
-					sleep(meditateDelay)
-				sleep(meditateWait)
+				sleep(50)
 				overlays-=/image/meditate
-				meditateWait = 50
 
-				//var/maxMP = MMP + extraMMP
-				//MP = min(maxMP, MP + maxMP*0.4)
-				//updateHPMP()
+				var/maxMP = MMP + extraMMP
+				MP = min(maxMP, MP + maxMP*0.4)
+				updateHPMP()
 
 mob
 	var/questionius = 2
