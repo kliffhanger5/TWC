@@ -187,5 +187,21 @@ obj/maxfood
 				if(usr.MP >= maxMP)
 					usr << "<font color=red>You don't feel like eating anything right now.."
 
+obj
+	Max_Potions_Kit
+		icon ='items.dmi'
+		icon_state=""
+		verb
+			set_up()
+				var/obj/Desk/O
+				if(!locate(O) in view(4))
+					usr <<"<font color = red>  You don't see a table to sit your cauldron on"
+				else
+					new/obj/Max_Potions_Kit(O.loc)
+					O.owner = usr
+					usr <<"<font color = green> You setup your cauldron on the nearest table"
+
+
+
 
 
