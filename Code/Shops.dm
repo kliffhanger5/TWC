@@ -51,16 +51,12 @@ mob/TalkNPC/quest/Tammie
 		var/obj/selecteditem
 		var/selectedprice
 		var/gold/g = new(usr)
-		switch(input("Tammie: Welcome to the Three Broomsticks. What do ya wanna do?","Tammie")as null|anything in list("Shop","Talk"))
+		switch(input("Tom: Welcome to the Leaky Cauldron. What do ya wanna do?","Tom")as null|anything in list("Shop","Talk"))
 			if("Talk")
 				if(pointer)
 					if(pointer.stage)
 						if(p.checkQuestProgress("Tammie"))
 							p << npcsay("Tammie: Wow, I can't believe you went and killed all those little innocent cute rats.")
-
-						else
-							p << npcsay("Tammie: What your diong is so cruel those poor essence")
-						return
 					else
 						p << npcsay("Tammie: Did you know there's a ritual that makes you stronger, apparently it involves gathering demonic essences, I wonder how you do that, maybe you have to kill a demonic creature.")
 						p.startQuest("Demonic Ritual")
