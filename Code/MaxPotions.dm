@@ -187,21 +187,47 @@ obj/maxfood
 				if(usr.MP >= maxMP)
 					usr << "<font color=red>You don't feel like eating anything right now.."
 
-obj
+
+
+obj//
 	Max_Potions_Kit
 		icon ='items.dmi'
-		icon_state=""
+		icon_state="cabinet"
+		layer = 3
 		verb
+
+
+			Get()
+				set src in oview(1)
+				src.loc = usr
 			set_up()
-				var/obj/Desk/O
-				if(!locate(O) in view(4))
-					usr <<"<font color = red>  You don't see a table to sit your cauldron on"
+				var/number = 0
+				var/obj/Desk/O = locate()
+				if(O)
+					for(O in view(usr))
+						if(number) break
+						new/obj/Max_Potions_Kit(O.loc)
+						O.owner = usr.name
+						number += 1
+						usr.MK = 1
+						usr <<"<font color = green> You setup your cauldron on the nearest table"
+
 				else
-					new/obj/Max_Potions_Kit(O.loc)
-					O.owner = usr
-					usr <<"<font color = green> You setup your cauldron on the nearest table"
+					usr <<"<font color = red> You don't see a Desk to setup your cauldron on"
 
 
+
+
+mob
+	var
+		MK
+
+
+
+client
+	Move(loc,dir)
+		..()
+//		src.mob.Kit_Deletion()
 
 
 
