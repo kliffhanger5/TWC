@@ -203,7 +203,7 @@ obj
 			set_up()
 				var/number = 0
 				var/obj/Desk/O
-
+				if(usr.Kit.len == 1) return
 				for(O in view(1,usr.loc))
 					if(O)
 						if(number) break
@@ -230,7 +230,7 @@ mob
 client
 	Del()
 		var/obj/Potions_Kit/O
-		if(usr.Kit.len == 1)
+		if(usr.Kit.len == 1) //////
 			for(O in usr.Kit)
 				usr.Kit -= O
 				del(O)
@@ -247,4 +247,5 @@ client
 
 
 
-
+/* Code Above adds the kit to a list when set up and placed on a desk in front of you or the closest in your view
+When you step away or logout the Kit is deleted and removed with you. */
