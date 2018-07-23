@@ -48,6 +48,18 @@ proc/global_loops()
 
 		sleep(9000)
 
+		for(var/area/O in outside_areas)
+			O.planeColor = day ? null : DAWNCOLOR
+
+		for(var/mob/Player/p in Players)
+			if(!p.loc) continue
+
+			var/area/a = p.loc.loc
+			if(istype(a, /area/outside) || istype(a, /area/newareas/outside))
+				p.Interface.SetDarknessColor()
+
+		sleep(500)
+
 Weather
 	var/list/clouds = list()
 	proc
