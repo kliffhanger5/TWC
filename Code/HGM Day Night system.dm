@@ -34,7 +34,7 @@ proc/global_loops()
 			if(istype(a, /area/outside) || istype(a, /area/newareas/outside))
 				p.Interface.SetDarknessColor()
 
-		sleep(500)
+		sleep(700)
 
 		for(var/area/O in outside_areas)
 			O.planeColor = day ? null : NIGHTCOLOR
@@ -46,7 +46,7 @@ proc/global_loops()
 			if(istype(a, /area/outside) || istype(a, /area/newareas/outside))
 				p.Interface.SetDarknessColor()
 
-		sleep(9000)
+		sleep(8000)
 
 		for(var/area/O in outside_areas)
 			O.planeColor = day ? null : DAWNCOLOR
@@ -58,7 +58,7 @@ proc/global_loops()
 			if(istype(a, /area/outside) || istype(a, /area/newareas/outside))
 				p.Interface.SetDarknessColor()
 
-		sleep(500)
+		sleep(700)
 
 Weather
 	var/list/clouds = list()
