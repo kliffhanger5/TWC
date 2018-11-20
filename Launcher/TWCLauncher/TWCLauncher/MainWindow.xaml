@@ -18,6 +18,7 @@
         <Button Content="Connect to other Servers" HorizontalAlignment="Left" Margin="449,367,0,0" VerticalAlignment="Top" Width="143" Click="CTOSB_Click_1"/>
         <Button Content="Connect Manually" HorizontalAlignment="Left" Margin="180,365,0,0" VerticalAlignment="Top" Width="143" Click="CMB_Click"/>
         <WebBrowser HorizontalAlignment="Left" Height="323" Margin="10,10,0,0" VerticalAlignment="Top" Width="772" Source="https://twcgame.tumblr.com/"/>
-        <ProgressBar HorizontalAlignment="Left" Height="18" Margin="10,394,0,0" VerticalAlignment="Top" Width="772"/>
+        <ProgressBar x:Name="PBMain" HorizontalAlignment="Left" Height="18" Margin="10,394,0,0" VerticalAlignment="Top" Width="772" ValueChanged="ProgressBar_ValueChanged" IsIndeterminate="True"/>
+        <Label x:Name="VersionLabel" Content="Version : 0.0" HorizontalAlignment="Left" Margin="624,365,0,0" VerticalAlignment="Top" Width="158" Foreground="WhiteSmoke"/>
     </Grid>
 </Window>
