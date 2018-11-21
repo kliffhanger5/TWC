@@ -20,6 +20,9 @@
 #define FILE_DIR "Icons/items/wearables/shoes"
 #define FILE_DIR "Icons/items/wearables/wands"
 #define FILE_DIR "Icons/items/wearables/wigs"
+#define FILE_DIR "Launcher"
+#define FILE_DIR "Launcher/TWCLauncher"
+#define FILE_DIR "Launcher/TWCLauncher/TWCLauncher"
 #define FILE_DIR "Sound"
 #define FILE_DIR "Sound/sfx"
 #define FILE_DIR "Sound/sfx/amb"
@@ -46,6 +49,8 @@
 
 // BEGIN_INCLUDE
 #include <audeuro\inireader2\INI Reader 2\INI Reader 2.dme>
+#include <deadron\basecamp\BaseCamp.dme>
+#include <deadron\texthandling\TextHandling.dme>
 #include <rotem12\colormatrix\ColorMatrix.dme>
 #include <stephen001\eventscheduling\Events\Events.dme>
 #include <theodis\pathfinder\Pathfinder.dme>
@@ -53,6 +58,7 @@
 #include "world.dmp"
 #include "Code\_Consts.dm"
 #include "Code\Actionbar.dm"
+#include "Code\Ambience.dm"
 #include "Code\Animagus.dm"
 #include "Code\Announce.dm"
 #include "Code\areas.dm"
@@ -99,6 +105,7 @@
 #include "Code\ParticleEmitter.dm"
 #include "Code\Pets.dm"
 #include "Code\PM.dm"
+#include "Code\Polls.dm"
 #include "Code\Potions.dm"
 #include "Code\Prom.dm"
 #include "Code\Protego.dm"
@@ -107,7 +114,6 @@
 #include "Code\Region.dm"
 #include "Code\RemovedStuff.dm"
 #include "Code\resize.dm"
-#include "Code\Revoke.dm"
 #include "Code\Shops.dm"
 #include "Code\signs.dm"
 #include "Code\SoundSetup.dm"

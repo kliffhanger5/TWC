@@ -1,112 +1,81 @@
-macro "gamepada"
-
-macro "gamepadh"
-	elem 
-		name = "["
-		command = "Who"
-	elem 
-		name = "CTRL+]"
-		command = "meditate"
-	elem 
-		name = "GamepadFace1"
-		map-to = "]"
-	elem 
-		name = "GamepadFace2"
-		map-to = "Ctrl+]"
-	elem 
-		name = "GamepadL1"
-		map-to = "1"
-	elem 
-		name = "GamepadR1"
-		map-to = "2"
-	elem 
-		name = "GamepadL2"
-		map-to = "3"
-	elem 
-		name = "GamepadR2"
-		map-to = "4"
-	elem 
-		name = "GamepadStart"
-		map-to = "["
-
 macro "macro"
 	elem 
-		name = "Center+REP"
+		name = "CENTER+REP"
 		command = ".center"
 	elem 
-		name = "ALT+Return"
+		name = "ALT+RETURN"
 		command = ".output browser1:ToggleFullscreen null"
 	elem 
-		name = "CTRL+Northeast"
+		name = "CTRL+NORTHEAST"
 		command = "anortheast"
 	elem 
-		name = "SHIFT+Northeast"
+		name = "SHIFT+NORTHEAST"
 		command = "anortheast"
 	elem 
-		name = "Northeast+REP"
+		name = "NORTHEAST+REP"
 		command = ".northeast"
 	elem 
-		name = "CTRL+Southeast"
+		name = "CTRL+SOUTHEAST"
 		command = "asoutheast"
 	elem 
-		name = "SHIFT+Southeast"
+		name = "SHIFT+SOUTHEAST"
 		command = "asoutheast"
 	elem 
-		name = "Southeast+REP"
+		name = "SOUTHEAST+REP"
 		command = ".southeast"
 	elem 
-		name = "CTRL+Southwest"
+		name = "CTRL+SOUTHWEST"
 		command = "asouthwest"
 	elem 
-		name = "SHIFT+Southwest"
+		name = "SHIFT+SOUTHWEST"
 		command = "asouthwest"
 	elem 
-		name = "Southwest+REP"
+		name = "SOUTHWEST+REP"
 		command = ".southwest"
 	elem 
-		name = "CTRL+Northwest"
+		name = "CTRL+NORTHWEST"
 		command = "anorthwest"
 	elem 
-		name = "SHIFT+Northwest"
+		name = "SHIFT+NORTHWEST"
 		command = "anorthwest"
 	elem 
-		name = "Northwest+REP"
+		name = "NORTHWEST+REP"
 		command = ".northwest"
 	elem 
-		name = "CTRL+West"
+		name = "CTRL+WEST"
 		command = "awest"
 	elem 
-		name = "SHIFT+West"
+		name = "SHIFT+WEST"
 		command = "awest"
 	elem 
-		name = "West+REP"
+		name = "WEST+REP"
 		command = ".west"
 	elem 
-		name = "CTRL+North"
+		name = "CTRL+NORTH"
 		command = "anorth"
 	elem 
-		name = "SHIFT+North"
+		name = "SHIFT+NORTH"
 		command = "anorth"
 	elem 
-		name = "North+REP"
+		name = "NORTH+REP"
 		command = ".north"
 	elem 
-		name = "CTRL+East"
+		name = "CTRL+EAST"
 		command = "aeast"
 	elem 
-		name = "SHIFT+East"
+		name = "SHIFT+EAST"
 		command = "aeast"
 	elem 
-		name = "East+REP"
+		name = "EAST+REP"
 		command = ".east"
 	elem 
-		name = "CTRL+South"
+		name = "CTRL+SOUTH"
 		command = "asouth"
 	elem 
-		name = "SHIFT+South"
+		name = "SHIFT+SOUTH"
 		command = "asouth"
 	elem 
-		name = "South+REP"
+		name = "SOUTH+REP"
 		command = ".south"
 
 
@@ -892,7 +861,6 @@ window "mainwindow"
 		size = 1x1
 		anchor1 = none
 		anchor2 = none
-		background-color = none
 		is-visible = false
 		saved-params = ""
 	elem "mainvsplit"
@@ -901,7 +869,7 @@ window "mainwindow"
 		size = 634x400
 		anchor1 = 0,0
 		anchor2 = 100,100
-		background-color = #ffffff
+		background-color = #1f1f1f
 		saved-params = "splitter"
 		right = "rpane"
 		is-vert = true
@@ -921,7 +889,6 @@ window "mainwindow"
 		size = 40x20
 		anchor1 = 100,100
 		anchor2 = none
-		background-color = none
 		saved-params = "is-checked"
 		text = "Chat"
 		command = ".winset \"saybutton.is-checked=true?input.command=\"!say \\\"\" macrobutton.is-checked=false:input.command=\""
@@ -932,7 +899,6 @@ window "mainwindow"
 		size = 30x20
 		anchor1 = 100,100
 		anchor2 = none
-		background-color = none
 		saved-params = "is-checked"
 		text = "Alt"
 		command = ".winset \"macrobutton.is-checked=true?input.command=\"!.alt \" saybutton.is-checked=false:input.command=\""
@@ -1043,19 +1009,6 @@ window "rpane"
 		saved-params = "is-checked"
 		text = "Forums"
 		command = "Forums"
-		group = "rpanemode"
-		button-type = pushbox
-	elem "button7"
-		type = BUTTON
-		pos = 320,0
-		size = 60x20
-		anchor1 = none
-		anchor2 = none
-		text-color = #ffffff
-		background-color = #2a2a2a
-		saved-params = "is-checked"
-		text = "Donate"
-		command = "donate"
 		group = "rpanemode"
 		button-type = pushbox
 	elem "button1"
@@ -1375,7 +1328,7 @@ window "winSettings"
 	elem "winSettings"
 		type = MAIN
 		pos = 281,0
-		size = 525x349
+		size = 535x300
 		anchor1 = none
 		anchor2 = none
 		background-color = #000000
@@ -1388,58 +1341,51 @@ window "winSettings"
 		macro = "macro"
 	elem "bar2"
 		type = BAR
-		pos = 16,24
-		size = 496x16
+		pos = 272,40
+		size = 16x256
 		anchor1 = none
 		anchor2 = none
-		background-color = #3b3b3b
+		background-color = #282828
 		saved-params = ""
-		bar-color = #6b6b6b
-		is-slider = false
-		dir = east
-	elem "bar1"
-		type = BAR
-		pos = 280,80
-		size = 8x256
-		anchor1 = none
-		anchor2 = none
-		background-color = #3b3b3b
-		saved-params = ""
-		bar-color = #6b6b6b
+		bar-color = #0f0f0f
 		is-slider = false
 		dir = north
-	elem "button4"
-		type = BUTTON
-		pos = 480,240
-		size = 32x32
-		anchor1 = none
-		anchor2 = none
-		saved-params = "is-checked"
-		text = ""
-		image = 'Icons\\JoyStickB.dmi'
-		command = ""
 	elem "button3"
 		type = BUTTON
-		pos = 392,280
-		size = 120x24
+		pos = 408,236
+		size = 120x28
 		anchor1 = none
 		anchor2 = none
+		background-color = none
+		border = line
 		saved-params = "is-checked"
-		text = "Set Client FPS"
+		text = "Client FPS"
 		command = "client-fps"
+		is-flat = true
 	elem "label1"
 		type = LABEL
-		pos = 128,4
-		size = 272x20
+		pos = 232,8
+		size = 60x20
 		anchor1 = none
 		anchor2 = none
-		text-color = #d01116
+		text-color = #e02747
 		background-color = #000000
 		saved-params = ""
-		text = "Game Settings"
+		text = "Settings"
+	elem "bar1"
+		type = BAR
+		pos = 8,32
+		size = 520x10
+		anchor1 = none
+		anchor2 = none
+		background-color = #2c2c2c
+		saved-params = ""
+		bar-color = #232323
+		is-slider = false
+		dir = east
 	elem "buttonControlSet"
 		type = BUTTON
-		pos = 8,319
+		pos = 9,276
 		size = 167x24
 		anchor1 = none
 		anchor2 = none
@@ -1452,10 +1398,11 @@ window "winSettings"
 		button-type = checkbox
 	elem "button5"
 		type = BUTTON
-		pos = 392,314
+		pos = 408,268
 		size = 120x28
 		anchor1 = none
 		anchor2 = none
+		background-color = none
 		border = line
 		saved-params = "is-checked"
 		text = "On-Screen Text Color"
@@ -1463,7 +1410,7 @@ window "winSettings"
 		is-flat = true
 	elem "butQuestTrackertoggle"
 		type = BUTTON
-		pos = 8,299
+		pos = 9,256
 		size = 119x24
 		anchor1 = none
 		anchor2 = none
@@ -1475,7 +1422,7 @@ window "winSettings"
 		button-type = checkbox
 	elem "butAFKtoggle"
 		type = BUTTON
-		pos = 8,276
+		pos = 9,233
 		size = 247x24
 		anchor1 = none
 		anchor2 = none
@@ -1487,7 +1434,7 @@ window "winSettings"
 		button-type = checkbox
 	elem "butSoundtoggle"
 		type = BUTTON
-		pos = 8,253
+		pos = 9,210
 		size = 232x24
 		anchor1 = none
 		anchor2 = none
@@ -1499,7 +1446,7 @@ window "winSettings"
 		button-type = checkbox
 	elem "butTradetoggle"
 		type = BUTTON
-		pos = 8,161
+		pos = 9,118
 		size = 200x20
 		anchor1 = none
 		anchor2 = none
@@ -1511,7 +1458,7 @@ window "winSettings"
 		button-type = checkbox
 	elem "butEventNotificationstoggle"
 		type = BUTTON
-		pos = 8,207
+		pos = 9,164
 		size = 239x20
 		anchor1 = none
 		anchor2 = none
@@ -1523,7 +1470,7 @@ window "winSettings"
 		button-type = checkbox
 	elem "butMonsterMessagestoggle"
 		type = BUTTON
-		pos = 8,230
+		pos = 9,187
 		size = 240x24
 		anchor1 = none
 		anchor2 = none
@@ -1535,7 +1482,7 @@ window "winSettings"
 		button-type = checkbox
 	elem "butClassNotificationstoggle"
 		type = BUTTON
-		pos = 8,184
+		pos = 9,141
 		size = 239x20
 		anchor1 = none
 		anchor2 = none
@@ -1547,7 +1494,7 @@ window "winSettings"
 		button-type = checkbox
 	elem "butHousechattoggle"
 		type = BUTTON
-		pos = 8,117
+		pos = 9,74
 		size = 126x20
 		anchor1 = none
 		anchor2 = none
@@ -1559,7 +1506,7 @@ window "winSettings"
 		button-type = checkbox
 	elem "butPMtoggle"
 		type = BUTTON
-		pos = 8,139
+		pos = 9,96
 		size = 200x20
 		anchor1 = none
 		anchor2 = none
@@ -1571,7 +1518,7 @@ window "winSettings"
 		button-type = checkbox
 	elem "butOOCtoggle"
 		type = BUTTON
-		pos = 8,95
+		pos = 9,52
 		size = 96x20
 		anchor1 = none
 		anchor2 = none
